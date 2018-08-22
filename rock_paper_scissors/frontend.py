@@ -45,6 +45,7 @@ class rps:
             First row
             Name --- Score --- Total games
         """
+        
         self.labelName = Label(frame, text='Player name: ' + self.uName)
         self.labelName.grid(row=0, column=1, sticky=W)
         self.labelScore = Label(frame, text='Total wins: ' + str(self.score))
