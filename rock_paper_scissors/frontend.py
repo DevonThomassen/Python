@@ -2,9 +2,11 @@ from tkinter import *
 from tkinter import ttk
 import random
 
+
 class rps:
 
     def __init__(self, root, uName):
+        # Root settings
         root.title('Rock, Paper, Scissor')
         root.geometry('500x100')
         root.resizable(width=False, height=False)
@@ -12,6 +14,7 @@ class rps:
         frame = Frame(root)
         frame.pack()
 
+        # Vars
         self.uName = uName
         self.uHand = 'N/A'
         self.bot = 'N/A'
@@ -19,10 +22,13 @@ class rps:
         self.score = 0
         self.games = 0
         print('New instance of game class for ' + self.uName)
+        print('Opening window...')
 
+        # Style
         style = ttk.Style()
         style.configure('TButton', font='Serif 15', padding=10)
 
+        # GUI
         """ 
             First row
             Name --- Score --- Total games
@@ -59,27 +65,38 @@ class rps:
         self.labelWinner = Label(frame, text=self.winner)
         self.labelWinner.grid(row=2, column=3, sticky=W)
 
+    # Onclick function
     def btnclick(self, value):
         self.uHand = value
         if self.uHand == 'rock' or self.uHand == 'paper' or self.uHand == 'scissors':
+            self.labelUser['text'] = 'You picked: ' + self.uHand.capitalize()
+            self.bot = random.randint(0, 2)
             print(100 * '-')
             print('You picked: ' + self.uHand.capitalize())
-            self.labelUser['text'] = self.uHand.capitalize()
-            self.bot = random.randint(0, 2)
-        # Invalid value will reset
-        else:
-            # Can't put in another value
-            print('Invalid input \n')
+        # uHand can't be a invalid input because the GUI
 
+        # Bot hand
         if self.bot == 0:
             print('CPU picked: Rock')
-            self.labelBot['text'] = 'Rock'
+            self.labelBot['text'] = 'CPU picked: Rock'
         elif self.bot == 1:
             print('CPU picked: Paper')
-            self.labelBot['text'] = 'Paper'
+            self.labelBot['text'] = 'CPU picked: Paper'
         elif self.bot == 2:
             print('CPU picked: Scissors')
-            self.labelBot['text'] = 'Scissors'
+            self.labelBot['text'] = 'CPU picked: Scissors'
+
+        # Game stats update function
+        def stats():
+            print()
+            self.games += 1
+            self.labelScore['text'] = 'Total wins: ' + str(self.score)
+            print('Total wins: ' + str(self.score))
+            self.labelGames['text'] = 'Total Games: ' + str(self.games)
+            print('Total Games: ' + str(self.games))
+            self.labelWinner['text'] = self.winner
+            print()
+            print(self.winner)
 
         # user won
         if (self.uHand == 'rock' and self.bot == 2) or \
@@ -87,38 +104,21 @@ class rps:
                 (self.uHand == 'scissors') and self.bot == 1:
             self.winner = 'You won'
             self.score += 1
-            self.games += 1
-            self.labelScore['text'] = 'Total wins: ' + str(self.score)
-            print('Total wins: ' + str(self.score))
-            self.labelGames['text'] = 'Total Games: ' + str(self.games)
-            print('Total Games: ' + str(self.games))
-            self.labelWinner['text'] = self.winner
+            stats()
         # user lost
         elif (self.uHand == 'rock' and self.bot == 1) or \
                 (self.uHand == 'paper' and self.bot == 2) or \
-                (self.uHand == 'scissor' and self.bot == 0):
+                (self.uHand == 'scissors' and self.bot == 0):
             self.winner = 'You lost'
-            self.games += 1
-            self.labelScore['text'] = 'Total wins: ' + str(self.score)
-            print('Total wins: ' + str(self.score))
-            self.labelGames['text'] = 'Total Games: ' + str(self.games)
-            print('Total Games: ' + str(self.games))
-            self.labelWinner['text'] = self.winner
+            stats()
         # user tied
         elif (self.uHand == 'rock' and self.bot == 0) or \
                 (self.uHand == 'paper' and self.bot == 1) or \
                 (self.uHand == 'scissors' and self.bot == 2):
             self.winner = 'Tie'
-            self.games += 1
-            self.labelScore['text'] = 'Total wins: ' + str(self.score)
-            print('Total wins: ' + str(self.score))
-            self.labelGames['text'] = 'Total Games: ' + str(self.games)
-            print('Total Games: ' + str(self.games))
-            self.labelWinner['text'] = self.winner
+            stats()
         else:
             print('Error')
-
-
 
 
 def main():
@@ -127,6 +127,7 @@ def main():
     # x.bot = random.randint(0, 2)
 
     root.mainloop()
+
 
 root = Tk()
 main()
