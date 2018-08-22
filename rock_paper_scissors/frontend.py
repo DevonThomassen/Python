@@ -89,7 +89,9 @@ class rps:
             self.score += 1
             self.games += 1
             self.labelScore['text'] = 'Total wins: ' + str(self.score)
+            print('Total wins: ' + str(self.score))
             self.labelGames['text'] = 'Total Games: ' + str(self.games)
+            print('Total Games: ' + str(self.games))
             self.labelWinner['text'] = self.winner
         # user lost
         elif (self.uHand == 'rock' and self.bot == 1) or \
@@ -98,7 +100,9 @@ class rps:
             self.winner = 'You lost'
             self.games += 1
             self.labelScore['text'] = 'Total wins: ' + str(self.score)
+            print('Total wins: ' + str(self.score))
             self.labelGames['text'] = 'Total Games: ' + str(self.games)
+            print('Total Games: ' + str(self.games))
             self.labelWinner['text'] = self.winner
         # user tied
         elif (self.uHand == 'rock' and self.bot == 0) or \
@@ -107,7 +111,9 @@ class rps:
             self.winner = 'Tie'
             self.games += 1
             self.labelScore['text'] = 'Total wins: ' + str(self.score)
+            print('Total wins: ' + str(self.score))
             self.labelGames['text'] = 'Total Games: ' + str(self.games)
+            print('Total Games: ' + str(self.games))
             self.labelWinner['text'] = self.winner
         else:
             print('Error')
