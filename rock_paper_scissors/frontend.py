@@ -1,3 +1,14 @@
+"""
+    Dutch                                   |   English
+    -------------------------------------------------------------------------------
+    Opdracht:       rock_paper_scissors     |   Exercise:       rock_paper_scissors
+    Auteur:         Devon Thomassen         |   Author:         Devon Thomassen
+    Datum + tijd:   21-8-2018               |   Date + Time:    21-08-2018
+    Bestandsnaam:   frontend.py             |   Filename:       frontend.py
+    Editor:         PyCharm                 |   Editor:         PyCharm
+    -------------------------------------------------------------------------------
+"""
+
 from tkinter import *
 from tkinter import ttk
 import random
