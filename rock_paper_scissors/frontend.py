@@ -124,8 +124,6 @@ class rps:
 def main():
     uName = input('What is your name?: ')
     x = rps(root, uName)
-    # x.bot = random.randint(0, 2)
-
     root.mainloop()
 
 
