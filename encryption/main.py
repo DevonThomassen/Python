@@ -34,7 +34,7 @@ def main():
         counter += 1
 
     print('Encrypted word: ' + password)
-    exit = input('Do you wanna quite (y, n)')
+    exit = input('Do you wanna quit (y, n)')
     if exit.lower() == 'n':
         main()
 
