@@ -1,12 +1,106 @@
 {
-  "users": [
-    {
-      "name": "Devon",
-      "score": "1"
-    },
-    {
-      "name": "Niels",
-      "score": "2"
-    }
-  ]
+	"_comment": "Trying out JSON perfect example :)",
+	"_comment2": "There is no 'J' in this data file, explanation in README.md",
+	"alphabet": [
+		{ 
+			"letter": "a",
+			"code": "0,0"
+		},
+		{ 
+			"letter": "b",
+			"code": "0,1"
+		},
+		{ 
+			"letter": "c",
+			"code": "0,2"
+		},
+		{ 
+			"letter": "d",
+			"code": "0,3"
+		},
+		{ 
+			"letter": "e",
+			"code": "0,4"
+		},
+		{ 
+			"letter": "f",
+			"code": "1,0"
+		},
+		{ 
+			"letter": "g",
+			"code": "1,1"
+		},
+		{ 
+			"letter": "h",
+			"code": "1,2"
+		},
+		{ 
+			"letter": "i",
+			"code": "1,3"
+		},
+		{ 
+			"letter": "k",
+			"code": "1,4"
+		},
+		{ 
+			"letter": "l",
+			"code": "2,0"
+		},
+		{ 
+			"letter": "m",
+			"code": "2,1"
+		},
+		{ 
+			"letter": "n",
+			"code": "2,2"
+		},
+		{ 
+			"letter": "o",
+			"code": "2,3"
+		},
+		{ 
+			"letter": "p",
+			"code": "2,4"
+		},
+		{ 
+			"letter": "q",
+			"code": "3,0"
+		},
+		{ 
+			"letter": "r",
+			"code": "3,1"
+		},
+		{ 
+			"letter": "s",
+			"code": "3,2"
+		},
+		{ 
+			"letter": "t",
+			"code": "3,3"
+		},
+		{ 
+			"letter": "u",
+			"code": "3,4"
+		},
+		{ 
+			"letter": "v",
+			"code": "4,0"
+		},
+		{ 
+			"letter": "w",
+			"code": "4,1"
+		},
+		{ 
+			"letter": "x",
+			"code": "4,2"
+		},
+		{ 
+			"letter": "y",
+			"code": "4,3"
+		},
+		{ 
+			"letter": "z",
+			"code": "4,4"
+		}
+	]
 }
