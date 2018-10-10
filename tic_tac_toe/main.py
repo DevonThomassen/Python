@@ -17,7 +17,7 @@ class game:
         # Vars
         self.uName = uName
         self.uSymbol = uSymbol.capitalize()
-        if uSymbol == 'x':
+        if uSymbol.lower() == 'x':
             self.bot = 'O'
         else:
             self.bot = 'X'
